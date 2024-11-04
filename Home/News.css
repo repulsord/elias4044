@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+.news {
+    position: relative;
+    z-index: 1;
+}
+
+.news-display {
+    background-color: rgba(29, 29, 29, 0.7);
+    padding: 5px 20px;
+    font-size: 24px;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    width: fit-content; /* Ensure the width fits the content */
+    display: inline-block; /* Make sure it behaves like a button */
+}
+
+.full-news {
+    font-family: "Fredoka",sans-serif;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    position: absolute;
+    top: 100%; /* Position beneath the button */
+    left: 0; /* Align with the left edge of the button */
+    z-index: 2;
+    color: white;
+}
+
+.full-news .news-one {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.full-news .news-one h1 {
+    font-size: 18px;
+    margin: 0 0 5px;
+    font-weight: 400;
+}
+
+.full-news .news-one p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.full-news:hover {
+    overflow-y: auto;
+    max-height: 300px; /* The scrollable area */
+}
+
+.full-news::-webkit-scrollbar {
+    width: 8px;
+}
+
+.full-news::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}

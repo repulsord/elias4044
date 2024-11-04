@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1d1d1d;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+#top-bar {
+    background-color: #444;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw; /* Full viewport width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    position: fixed; /* Make the bar fixed at the top */
+    top: 0;
+    left: 0;
+}
+
+body {
+    padding-top: 60px; /* Prevent content from being overlapped by the fixed top bar */
+}
+
+ #top-bar #app-name .spotifyFullLogoTopRight {
+    width: 100px; /* Adjust to a reasonable size */
+    height: auto;
+} 
+
+#top-bar #home-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+    
+    #top-bar #app-name .spotifyFullLogoTopRight {
+        width: 7%;
+        height: 7%;
+        padding-right: 2000px;
+    }
+  
+.musicControlButton {
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent !important;
+    font-size: 30px;
+}
+
+#play-pause-btn {
+    background-color: transparent !important;
+    font-size: 30px;
+}
+
+.top-right-btn {
+    background-color: #ff3b3b; /* Red for logout */
+    margin-left: auto; /* Push to the right */
+}
+  
+h1 {
+    color: #1DB954;
+    font-family: lexend;
+}
+
+#login-btn {
+    background-color: #f3f7fe;
+    color: #3b8af6;
+    font-style: bold;
+    font-family: lexend;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: 0.3s;
+  }
+  
+#login-btn:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+  }
+  
+  
+p {
+    font-size: 1.2em;
+    color: white;
+}
+  
+#album-cover {
+    width: 200px; /* Set the width of the album cover */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Add some margin */
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex; /* Use flexbox for controls */
+    justify-content: center; /* Center the controls */
+}
+
+#prev-btn, #next-btn {
+    background-color: #1DB954; /* Same color as play/pause */
+    margin: 0 10px; /* Margin for spacing */
+}
+
+.preview {
+    position: absolute; /* Position relative to the button */
+    background-color: #444; /* Dark background */
+    color: white; /* White text */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    top: 50px; /* Position below the button */
+    left: calc(50% - 50px); /* Center the preview */
+    width: 200px; /* Width of the preview */
+    display: none; /* Initially hidden */
+}

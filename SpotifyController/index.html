@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Controller</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+</head>
+<body>
+  <!-- Top Bar -->
+  <div id="top-bar">
+    <a href="/Home/Main.html" id="home-btn">
+        <span class="material-symbols-rounded">
+            home
+        </span>
+    </a>
+    <span id="app-name">
+        <img src="SpotifyFullLogo.png" alt="Spotify" class="spotifyFullLogoTopRight">
+    </span>
+    <button id="unlink-btn" class="top-right-btn">Log out</button>
+  </div>
+
+  <h1>Control your Spotify Music</h1>
+
+  <div id="login-container">
+    <button id="login-btn">Log in with Spotify</button>
+  </div>
+
+  <div id="content" style="display:none;">
+    <p>Now playing:</p>
+    <img id="album-cover" src="" alt="Album Cover failed to load" />
+
+    <p id="track-name">No track playing</p>
+
+    <p id="artist-name">Artist: Unknown</p> <!-- Added artist name -->
+
+
+    <div class="controls">
+      <button id="prev-btn" title="Previous" class="musicControlButton"><i class="fa-solid fa-backward-step"></i></button>
+      <button id="play-pause-btn" title="Play/Pause" class="musicControlButton">
+        
+        <i class="fa-solid fa-play" id="play-pause-icon"></i> <!-- FontAwesome icon -->
+      </button>      
+      <button class="musicControlButton" id="next-btn" title="Next" onmouseover="showPreview()" onmouseout="hidePreview()"><i class="fa-solid fa-forward-step"></i></button>
+    </div>
+    <div id="next-song-preview" class="preview" style="display:none;"></div> <!-- Preview for next song -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

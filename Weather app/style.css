@@ -1,0 +1,116 @@
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    width: 350px;
+    height: max-content;
+    background-color: #f7f7f7;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px #5553;
+    padding: 30px;
+    box-sizing: border-box;
+    font-family: lexend;
+}
+
+form {
+    border: 1px solid #5552;
+    display: flex;
+    border-radius: 30px;
+}
+
+input,
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+i {
+    opacity: 0.7;
+}
+
+.result {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.result .name {
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.temperature img {
+    width: 150px;
+    filter: drop-shadow(0 10px 50px #555);
+}
+
+.temperature figcaption {
+    font-size: 3em;
+    position: relative;
+    top: -10px; /* Move temperature text up */
+}
+
+.description {
+    padding: 10px 0 30px;
+    text-align: center;
+}
+
+.description::first-letter {
+    text-transform: capitalize;
+}
+
+/* Grid Layout for Weather Info */
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create three even columns */
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #f78a55;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-image: linear-gradient(to bottom, transparent 50%, #0003 50%);
+    font-weight: bold;
+    font-size: small;
+    text-align: center; /* Center the content inside the box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li i {
+    font-size: 2em;
+    margin: 10px 0;
+    display: block;
+}
+
+li:nth-child(2) {
+    background-color: #b56291;
+}
+
+li:nth-child(3) {
+    background-color: #48567b;
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="Background.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+
+<body>
+    <main>
+        <form>
+            <input type="text" id="name" autocomplete="off">
+            <button>
+                <i class="fa-solid (icon)"></i>
+            </button>
+        </form>
+        <section class="result">
+            <figure class="name">
+                <figcaption>Tokyo</figcaption>
+                <img src="https://flagsapi.com/JP/shiny/32.png" alt="flag failed to load :(">
+            </figure>
+
+            <figure class="temperature">
+                <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="Icon failed to load :(">
+                <figcaption>
+                    <span>31</span>
+                    <sup>o</sup>
+                </figcaption>
+            </figure>
+            <p calss="description">overcast clouds</p>
+            <ul>
+                <li>
+                    <span>Clouds</span>
+                    <span class="material-symbols-outlined">
+                        cloud
+                    </span>
+                    <span id="clouds">98</span>%
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <span class="material-symbols-outlined">
+                        water_drop
+                    </span>
+                    <span>98</span>%
+                </li>
+                <li>
+                    <span>Pressure</span>
+                    <i class="idk, please help"></i> <!-- Please insert/fix the icons, thanks -->
+                    <span id="pressure">1011</span>hPa
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/e04d58bc5a.js" crossorigin="anonymous"></script>
+
+</html>
