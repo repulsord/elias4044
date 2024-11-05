@@ -98,7 +98,7 @@ function togglePlayPause(token) {
     .then(() => {
       setTimeout(() => {
         getCurrentTrack(token); // Updates the track info to reflect the new state
-      }, 500); // Delay of 500 milliseconds before updating the track info
+      }, 200); // Delay of 500 milliseconds before updating the track info
     })
     .catch(() => {
       // Reverts the icon if there's an error
@@ -113,7 +113,7 @@ function togglePlayPause(token) {
     .then(() => {
       setTimeout(() => {
         getCurrentTrack(token); // Update the track info to reflect the new state
-      }, 500); // Delay of 500 milliseconds before updating the track info
+      }, 200); // Delay of 500 milliseconds before updating the track info
     })
     .catch(() => {
       // Reverts the icon if there's an error
