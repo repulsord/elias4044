@@ -1,20 +1,57 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(https://use.fontawesome.com/release/v6.4.2/css/all.css);
 
+@media (max-width: 768px) {
+    .sidebar {
+        scale: 0.8;
+        position: relative;
+        top: 10px;
+        left: 50px;
+        z-index: 9999;
+    }
+}
+
+/* Style the top bar */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 10000; /* Ensure it appears on top */
+}
+
+/* Add padding at the top of the page to prevent content overlap */
+.wrapper {
+    padding-top: 60px; /* Matches top-bar height */
+}
+
+
 .sidebar {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start; /* Align items at the top */
+    align-items: flex-start;
+    /* Align items at the top */
     padding-right: 20px;
-    padding-top: 20px; /* Adjust this value to bring the sidebar up */
+    padding-top: 20px;
+    /* Adjust this value to bring the sidebar up */
     font-family: Lexend;
-    position: relative; /* Add relative positioning if needed */
+    z-index: inherit;
+    position: relative;
+    /* Add relative positioning if needed */
 }
 
 ul {
-    transform: skewY(-15deg); /* Keeps your skew effect */
+    transform: skewY(-15deg);
+    /* Keeps your skew effect */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -31,7 +68,7 @@ li {
 }
 
 .five a {
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 li:hover {
