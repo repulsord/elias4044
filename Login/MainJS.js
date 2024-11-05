@@ -10,7 +10,7 @@ function signIn() {
 
     if (username === 'admin' && password === '1234') {
         localStorage.setItem('username', username);
-        window.location.href = "./";
+    window.location.href = "https://elias4044.netlify.app/";
     } else {
         alert('Invalid username or password. Please try again.');
         username = "";
