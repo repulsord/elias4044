@@ -10,7 +10,7 @@ function signIn() {
 
     if (username === 'admin' && password === '1234') {
         localStorage.setItem('username', username);
-        window.location.href = "/Home/Main.html";
+        window.location.href = "./";
     } else {
         alert('Invalid username or password. Please try again.');
         username = "";
