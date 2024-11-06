@@ -173,10 +173,9 @@ function hidePreview() {
   nextSongPreview.style.display = 'none'; // Hides the preview
 }
 
-document.addEventListener("keydown", function(event) {
-  // Check if the key pressed is the spacebar (key code 32)
+window.addEventListener("keydown", function(event) {
   if (event.code === "Space") {
-      console.log("Spacebar was pressed!");
-      // You can add any other function you want to trigger here
+      event.preventDefault();
+      togglePlayPause(token); // Toggles play/pause on spacebar press
   }
 });
