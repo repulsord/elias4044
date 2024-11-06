@@ -172,3 +172,4 @@ function showPreview() {
 function hidePreview() {
   nextSongPreview.style.display = 'none'; // Hides the preview
 }
+

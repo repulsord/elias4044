@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(https://use.fontawesome.com/release/v6.4.2/css/all.css);
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lexend:wght@100..900&family=Oswald:wght@200..700&display=swap');
 
 @media (max-width: 768px) {
     .sidebar {
@@ -8,6 +9,10 @@
         top: 10px;
         left: 50px;
         z-index: 9999;
+    }
+
+    .top-bar h1 {
+        font-size: 23px !important;
     }
 }
 
@@ -23,7 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 15px;
     z-index: 10000; /* Ensure it appears on top */
 }
 
