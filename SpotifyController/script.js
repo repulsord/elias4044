@@ -179,3 +179,10 @@ window.addEventListener("keydown", function(event) {
       togglePlayPause(token); // Toggles play/pause on spacebar press
   }
 });
+
+window.addEventListener("keydown", function(event) {
+  if (event.code === 39) {
+      event.preventDefault();
+      togglePlayPause(token); // Toggles play/pause on spacebar press
+  }
+});
