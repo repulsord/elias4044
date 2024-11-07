@@ -1,0 +1,138 @@
+/* General Reset and Body Styling */
+body {
+    background-color: #0d1b2a;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;  /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    height: 100vh;
+    margin: 0;
+}
+
+/* Background Shape Styling */
+.background {
+    position: absolute;
+    width: 450px;
+    height: 500px;
+    z-index: -1; /* Put the background behind the form */
+}
+.shape {
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child {
+    width: 230px;
+    height: 230px;
+    top: -50px;
+    left: -50px;
+    background: linear-gradient(135deg, #1845ad, #23a2f6);
+}
+.shape:last-child {
+    width: 200px;
+    height: 200px;
+    bottom: -40px;
+    right: -50px;
+    background: linear-gradient(135deg, #ff512f, #f09819);
+}
+
+/* Form Styling */
+form {
+    position: relative;
+    width: 360px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+form h3 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Input and Button Styling */
+label, input, button {
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+input, button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+input {
+    background-color: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+    padding: 10px 0 !important;
+    padding-left: 5px !important;
+}
+button {
+    background-color: #ffffff;
+    color: #0d1b2a;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #e5e5e5;
+}
+
+/* Social Login Buttons */
+.social {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.social div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    color: #eaf0fb;
+    background-color: rgba(255, 255, 255, 0.27);
+    border-radius: 5px;
+}
+.social div:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.social i {
+    margin-right: 5px;
+}
+
+/* Add these styles for the Sign-Up button */
+.social .signup {
+    background-color: #4CAF50; /* Green color for Sign Up */
+    color: white;
+    cursor: pointer;
+}
+
+.social .signup:hover {
+    background-color: #4eda55;
+}
+
+/* Add styles for the "Back to Login" button */
+.social .backToLogin {
+    color: #ffffff;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+
+.social .backToLogin:hover {
+    background-color: #555;
+}
+
+/* Initially hide the sign-up form */
+.hidden {
+    display: none;
+}
+
+/* Show the login form by default */
+form.login {
+    display:block;
+}

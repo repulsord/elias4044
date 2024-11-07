@@ -3,20 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lexend:wght@100..900&family=Oswald:wght@200..700&display=swap');
 
 @media (max-width: 768px) {
-    .sidebar {
-        scale: 0.8;
-        position: relative;
-        top: 10px;
-        left: 50px;
-        z-index: 9999;
-    }
 
     .top-bar h1 {
         font-size: 23px !important;
     }
 }
 
-/* Style the top bar */
+
+/* Add padding at the top of the page to prevent content overlap */
+.wrapper {
+    padding-top: 60px; /* Matches top-bar height */
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+
+/* Dropdown button styling */
+/* Top Bar Styling */
 .top-bar {
     position: fixed;
     top: 0;
@@ -25,34 +30,104 @@
     height: 60px;
     background-color: #333;
     color: white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+    z-index: 10000;
+}
+
+.top-bar h1 {
+    font-size: 25px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    padding-left: 20px;
+}
+
+.top-bar .login-btn {
+    background-color: #555555;
+    color: #3b8af6;
+    font-style: bold;
+    font-family: lexend;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+
+/* Dropdown Menu Styling */
+.dropdown-menus {
+    display: flex;
+    gap: 10px; /* Space between dropdowns */
+    margin-left: auto; /* Aligns categories to the right */
+    margin-right: 20px; /* Adjust this to fine-tune distance to login button */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    z-index: 10000; /* Ensure it appears on top */
+    gap: 10px;
+    font-family: 'Lexend', sans-serif;
 }
 
-/* Add padding at the top of the page to prevent content overlap */
-.wrapper {
-    padding-top: 60px; /* Matches top-bar height */
+.dropdown-content a:hover {
+    background-color: #666;
 }
 
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-.sidebar {
-    margin: 0;
-    height: 100vh;
+/* Login Button Styling */
+.login-btn {
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-family: 'Lexend', sans-serif;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    /* Align items at the top */
-    padding-right: 20px;
-    padding-top: 20px;
-    /* Adjust this value to bring the sidebar up */
-    font-family: Lexend;
-    z-index: inherit;
-    position: relative;
-    /* Add relative positioning if needed */
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
 }
+
+.login-btn:hover {
+    background-color: #666;
+}
+
+
 
 ul {
     transform: skewY(-15deg);

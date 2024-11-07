@@ -3,7 +3,7 @@ A website for a bunch of tools!
 It contains:
  - A spotify controller
  - A weatherapp
- - A login (out of function currently)
+ - A login (out of function currently but in progress)
  - A home site
 
 You can find the site at https://elias4044.netlify.app
