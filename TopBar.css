@@ -1,0 +1,241 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://use.fontawesome.com/release/v6.4.2/css/all.css);
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lexend:wght@100..900&family=Oswald:wght@200..700&display=swap');
+
+@media (max-width: 768px) {
+
+    .top-bar h1 {
+        font-size: 23px !important;
+    }
+}
+
+
+/* Add padding at the top of the page to prevent content overlap */
+.wrapper {
+    padding-top: 60px; /* Matches top-bar height */
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+
+/* Dropdown .login-btn-element styling */
+/* Top Bar Styling */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+    z-index: 10000;
+}
+
+.top-bar h1 {
+    font-size: 25px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    padding-left: 20px;
+}
+
+
+
+/* Dropdown Menu Styling */
+.dropdown-menus {
+    display: flex;
+    gap: 10px; /* Space between dropdowns */
+    margin-left: auto; /* Aligns categories to the right */
+    margin-right: 50px; 
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-login-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #666;
+}
+
+/* Shows dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Login .login-btn-element Styling */
+.login-btn-element {
+    font-size: 18px;
+    color: #e1e1e1;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+
+  .login-btn {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .dropdown-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+}
+
+.dropdown {
+    background: none;
+}
+
+  .login-btn-element:focus,
+  .login-btn-element:hover {
+    color: #fff;
+  }
+  
+  .login-btn-element:focus:after,
+  .login-btn-element:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .login-btn-element:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  
+
+
+ul {
+    transform: skewY(-15deg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    list-style: none;
+    width: 200px;
+    padding: 15px;
+    background: #CFA5B4;
+    z-index: calc(1 * var(--i));
+    transition: 0.5s;
+}
+
+.five a {
+    text-decoration: underline;
+}
+
+li:hover {
+    background-color: #996fae;
+    transform: translateX(-50px);
+}
+
+li::before {
+    font-family: "FontAwesome";
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: attr(data-icons);
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #d687b8;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+li:hover::before {
+    background-color: #7b5190;
+}
+
+li::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    background: #cf8ca3;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+li:hover::after {
+    background: #86589d;
+}
+
+li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+li:last-child::after {
+    box-shadow: -120px 120px 20px rgba(40, 40, 40, 0.25);
+}
