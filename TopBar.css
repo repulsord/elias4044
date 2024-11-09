@@ -5,14 +5,28 @@
 @media (max-width: 768px) {
 
     .top-bar h1 {
-        font-size: 23px !important;
+        display: none;
+    }
+
+    .article {
+        padding-right: 50px !important;
+        margin: 5px !important;
+        
+    }
+
+    .article #title {
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        padding-right: 200px !important;
     }
 }
 
 
-/* Add padding at the top of the page to prevent content overlap */
+/* Adds padding at the top of the page to prevent content overlap */
 .wrapper {
-    padding-top: 60px; /* Matches top-bar height */
+    padding-top: 60px;
+    /* Matches top-bar height */
 }
 
 .dropdown-content.show {
@@ -30,7 +44,7 @@
     height: 60px;
     background-color: #333;
     color: white;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0;
@@ -50,9 +64,11 @@
 /* Dropdown Menu Styling */
 .dropdown-menus {
     display: flex;
-    gap: 10px; /* Space between dropdowns */
-    margin-left: auto; /* Aligns categories to the right */
-    margin-right: 50px; 
+    gap: 10px;
+    /* Space between dropdowns */
+    margin-left: auto;
+    /* Aligns categories to the right */
+    margin-right: 50px;
 }
 
 .dropdown {
@@ -114,14 +130,14 @@
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: color;
-  }
+}
 
-  .login-btn {
+.login-btn {
     color: white;
     text-decoration: none;
-  }
-  
-  .dropdown-btn {
+}
+
+.dropdown-btn {
     background-color: #333;
     color: white;
     padding: 10px;
@@ -135,18 +151,18 @@
     background: none;
 }
 
-  .login-btn-element:focus,
-  .login-btn-element:hover {
+.login-btn-element:focus,
+.login-btn-element:hover {
     color: #fff;
-  }
-  
-  .login-btn-element:focus:after,
-  .login-btn-element:hover:after {
+}
+
+.login-btn-element:focus:after,
+.login-btn-element:hover:after {
     width: 100%;
     left: 0%;
-  }
-  
-  .login-btn-element:after {
+}
+
+.login-btn-element:after {
     content: "";
     pointer-events: none;
     bottom: -2px;
@@ -158,8 +174,8 @@
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
-  }
-  
+}
+
 
 
 ul {
