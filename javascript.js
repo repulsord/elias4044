@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Logout action
             localStorage.removeItem('username');
             localStorage.removeItem('password');
+            document.querySelector(".login-btn").href = '#';
             window.location.reload(); // Refreshes page to update login status
         });
     } else {
