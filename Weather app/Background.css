@@ -1,9 +1,4 @@
 body {
-    background-image: url(background.jpg);
-    background-size: cover;
-    background-position: center;
-
-    background-repeat: no-repeat;
-
-    background-attachment: fixed;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgb(26, 26, 26) 0%, rgb(0, 0, 0) 100%) !important;
 }

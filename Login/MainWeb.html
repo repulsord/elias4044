@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
+
 <body>
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-<!-- Login Form -->
-<form class="login">
-    <h3>Login</h3>
-    <label for="username">Username</label>
-    <input type="text" placeholder="Username" id="username">
 
-    <label for="password">Password</label>
-    <input type="password" placeholder="Password" id="password">
+    <!-- Login Form -->
+    <form class="login">
+        <h3>Login</h3>
+        <label for="username">Email</label>
+        <input type="email" placeholder="Email" id="username">
 
-    <button type="submit">Log In</button>
-    <div class="social">
-        <!-- Sign Up Button -->
-        <button type="button" class="signup" onclick="toggleView()">Sign Up</button>
-    </div>
-</form>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">
 
-<!-- Sign Up Form -->
-<form class="sign-up hidden">
-    <h3>Sign Up</h3>
-    <label for="signupUsername">Username</label>
-    <input type="text" placeholder="Username" id="signupUsername">
+        <button type="submit">Log In</button>
+        <div class="social">
+            <button class="googleSignIn" type="button">Google</button>
+            <button class="githubSignIn" type="button">GitHub</button>
+            <button type="button" class="backToSignup">Sign Up</button>
+        </div>
+    </form>
 
-    <label for="signupPassword">Password</label>
-    <input type="password" placeholder="Password" id="signupPassword">
+    <!-- Sign Up Form -->
+    <form class="sign-up hidden">
+        <h3>Sign Up</h3>
+        <label for="signupEmail">Email</label>
+        <input type="email" placeholder="Email" id="signupEmail">
 
-    <button id="signupButton" type="button">Sign Up</button>
-    <div class="social">
-        <!-- Back to Login Button -->
-        <button type="button" class="backToLogin" onclick="toggleView()">Back to Login</button>
-    </div>
-</form>
+        <label for="signupUsername">Username</label>
+        <input type="text" placeholder="Choose a username" id="signupUsername">
+
+        <label for="signupPassword">Password</label>
+        <input type="password" placeholder="Password" id="signupPassword">
+
+        <button type="button" id="signupButton">Sign Up</button>
+        <div class="social">
+            <button class="googleSignUp" type="button">Google</button>
+            <button class="githubSignUp" type="button">GitHub</button>
+            <button type="button" class="backToLogin">Back to Login</button>
+        </div>
+    </form>
 
 
-
-
-
-    <script src="MainJS.js"></script>
+    <script type="module" src="MainJS.js"></script>
 </body>
+
 </html>
