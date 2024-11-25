@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>elias4044 - 2048</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="highScoreContainer">
+    High Score: <span id="highScoreElement">0</span>
+  </div>
+
+  <div id="deleteHighScore">
+    <button id="deleteHighScoreButton" onclick="removeHighScore()">Delete High Score </button>
+  </div>
+
+  <i><a href="https://elias4044.netlify.app"><i class="fas fa-home" id="home"></i></a></i>
+
+  <button id="darkModeToggle" class="button">Toggle Dark Mode</button>
+
+  <div class="container">
+    <div id="alert"></div>
+    <div class="board">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+    <div class="tileContainer"></div>
+  </div>
+
+  <div class="elementContainer">
+    <div class="title">
+      <h1>2048</h1>
+    </div>
+    <div class="scoreElementContainer">
+      <div id="scoreLabel">Score</div>
+      <div id="scoreElement">0</div>
+    </div>
+    <div>
+      <button class="button" onclick="startNewGame()">New Game</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+
+  <script src="https://kit.fontawesome.com/e04d58bc5a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
