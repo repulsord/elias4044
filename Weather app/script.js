@@ -7,21 +7,28 @@ const temperature = document.querySelector(".temperature");
 const description = document.querySelector(".description");
 const valueSearch = document.getElementById("name");
 const clouds = document.getElementById("clouds");
-const humidity = document.getElementById("humidity");getComputedStyle
+const humidity = document.getElementById("humidity");
 const pressure = document.getElementById("pressure");
+const wind = document.getElementById("wind");
+const errorMessage = document.querySelector(".error-message");
+const search = document.getElementById("search");
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (valueSearch.value.trim() !== "") {
-        searchWeather(); // Calls the function
+        searchWeather(); // Call the function
     }
 });
 
 const searchWeather = async () => {
     try {
+        search.innerHTML = "Loading...";
+        search.className = "loading"; // Adding loading class
+        errorMessage.style.display = "none"; // Hide errors
         const resp = await fetch(`${url}&q=${valueSearch.value}`);
         const data = await resp.json();
-        console.log(data);
+        search.innerHTML = "Search";
+        search.className = ""; // Remove loading class
 
         if (data.cod === 200) {
             city.querySelector("figcaption").innerHTML = data.name;
@@ -34,11 +41,16 @@ const searchWeather = async () => {
             clouds.innerText = data.clouds.all;
             humidity.innerText = data.main.humidity;
             pressure.innerText = data.main.pressure;
+            wind.innerText = data.wind.speed.toFixed(1);
+
+            valueSearch.value = ""; // Clear input
         } else {
-            console.error("City not found");
+            throw new Error("City not found.");
         }
     } catch (error) {
-        console.error("Failed to fetch weather data", error);
+        loadingSpinner.style.display = "none"; // Hide spinner
+        errorMessage.style.display = "block";
+        errorMessage.innerText = error.message || "Failed to fetch weather data.";
     }
 };
 
