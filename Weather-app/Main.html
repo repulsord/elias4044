@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+
+<body>
+    <main>
+        <form>
+            <input type="text" id="name" placeholder="Enter a city name..." autocomplete="off">
+            <button type="submit" id="search" class="">Search</button>
+        </form>
+        <div class="loading-spinner"></div>
+        <section class="result">
+            <figure class="name">
+                <figcaption>Tokyo</figcaption>
+                <img src="https://flagsapi.com/JP/shiny/32.png" alt="Flag">
+            </figure>
+
+            <figure class="temperature">
+                <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="Icon">
+                <figcaption>
+                    <span>31</span>
+                    <sup>o</sup>
+                </figcaption>
+            </figure>
+            <p class="description">Overcast clouds</p>
+            <ul>
+                <li>
+                    <span>Clouds</span>
+                    <span class="material-symbols-outlined">cloud</span>
+                    <span id="clouds">98</span>%
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <span class="material-symbols-outlined">water_drop</span>
+                    <span id="humidity">98</span>%
+                </li>
+                <li>
+                    <span>Pressure</span>
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span id="pressure">1011</span>hPa
+                </li>
+                <li>
+                    <span>Wind Speed</span>
+                    <span class="material-symbols-outlined">air</span>
+                    <span id="wind">15</span>km/h
+                </li>
+            </ul>
+            <p class="error-message"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/e04d58bc5a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

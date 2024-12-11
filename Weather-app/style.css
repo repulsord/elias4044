@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* General Container */
+main {
+    width: 90%; /* Use a percentage for better scaling on smaller devices */
+    max-width: 500px; /* Ensure it doesn't grow too large */
+    height: max-content;
+    background-color: #f7f7f7;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px #5553;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: lexend;
+}
+
+/* Form */
+form {
+    display: flex;
+    border: 1px solid #5552;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    background-color: transparent;
+    outline: none;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Loading Spinner Inside Button */
+button .loading-spinner {
+    display: inline-block;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 0.8s linear infinite;
+    vertical-align: middle;
+}
+
+/* Ensure consistent button size */
+button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* Result Section */
+.result {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.temperature img {
+    width: 120px; /* Smaller for mobile */
+    filter: drop-shadow(0 10px 50px #555);
+}
+
+.temperature figcaption {
+    font-size: 2.5em; /* Slightly smaller text */
+    position: relative;
+    top: -10px;
+}
+
+.description {
+    padding: 10px 0 20px;
+    text-align: center;
+}
+
+/* Weather Info Specs */
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row for mobile */
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #f78a55;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: small;
+}
+
+li:nth-child(2) {
+    background-color: #b56291;
+}
+
+li:nth-child(3) {
+    background-color: #48567b;
+}
+
+li:nth-child(4) {
+    background-color: #3b85b2;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 480px) {
+    /* Adjust Container */
+    main {
+        padding: 15px;
+    }
+
+
+
+    /* Form Stacking for Small Screens */
+    form {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 0; /* Add spacing between input and button */
+        border-radius: 15px !important;
+    }
+
+    button {
+        width: 100%; /* Button takes full width */
+    }
+
+    /* Adjust Temperature Display */
+    .temperature img {
+        width: 100px;
+    }
+
+    .temperature figcaption {
+        font-size: 2em; /* Smaller font */
+    }
+
+    /* Specs Layout */
+    ul {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    }
+
+    li {
+        padding: 15px;
+        font-size: smaller;
+    }
+}
