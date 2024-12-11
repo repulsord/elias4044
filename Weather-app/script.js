@@ -55,6 +55,17 @@ const searchWeather = async () => {
     }
 };
 
+const inputField = document.getElementById("name");
+
+inputField.addEventListener("focus", () => {
+    document.body.style.height = "calc(100vh - 50px)"; // Adjust height dynamically
+});
+
+inputField.addEventListener("blur", () => {
+    document.body.style.height = "100vh"; // Restore height when keyboard is closed
+});
+
+
 // Default search on page load
 valueSearch.value = "Tokyo";
 searchWeather();
